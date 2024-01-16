@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>St Judes Catholic Church</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="/css/index.css" />
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img
+                    src="/Images/1d84cc8795b5e929fcdb741ba57b0129.png %>"
+                    alt="Image Description"
+                />
+            </div>
+            <div class="user">
+                <img src="<%='/files/'+user.image%>" alt="USERIMAGE">
+                <h6> welcome: <%=user.username%></h6>
+            </div>
+            <nav>
+                <a href="/">Home</a>
+                <a href="#">About</a>
+                <a href="/contact">Contact Us</a>
+                <a href="/login">Login</a>
+                <a href="/signup">Sign Up</a>
+                <a href="#">Donate</a>
+            </nav>
+            <div class="search">
+                <form class="d-flex" role="search">
+                    <input
+                        class="form-control me-2"
+                        type="search"
+                        placeholder="Search"
+                        aria-label="Search"
+                    />
+                    <button class="btn btn-outline-success" type="submit">
+                        Search
+                    </button>
+                </form>
+            </div>
+        </header>
+        
+        <main>
+            <div class="createposts">
+                <form action="/api/posts/createpost" method="post" enctype="multipart/form-data">
+                    <div class="writePost">
+                        <label for="post"
+                            ><img src="<%='/files/'+user.image%>" alt="image"
+                        /></label>
+                        <textarea style="outline: none; border: none; padding: 5px; background-color: rgb(215, 224, 224); border-radius: 10px;"
+                            name="content"
+                            aria-hidden="true"
+                            id="post"
+                            cols="10"
+                            rows="2"
+                            placeholder="Whats on your mind, <%=user.username%>?"
+                        ></textarea>
+                    </div>
+                    <hr/>
+                    <div class="postimage">
+                        <!-- <label for="image">Upload Image:</label> -->
+                        <input type="file" id="imageUpload" name="file" multiple/>
+                    </div>
+                    <div class="submitpost">
+                        <button type="submit">Post</button>
+                    </div>
+                </form>
+                <div class="postWrap">
+                    <%posts.forEach(function(post){%>
+                    <div class="posts">
+                        <div class="postuser">
+                            <img src="<%='/files/'+post.user.image%>" alt="USERIMAGE" />
+                            <h6><%=post.user.username%></h6>
+                        </div>
+                        <hr>
+                        <div class="commentText">
+                            <p>
+                                <%=post.content%>
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="commentPic">
+                                <%post.file.forEach(function(image){%>
+                                    <img src="<%='/files/'+image%>" alt="PostImage">
+                                <%})%>
+                        </div>
+                        <hr>
+                        <div class="count">
+                            <div class="likeCount">
+                                <img src="/Images/likeicon.png" alt="like">
+                                <p>200</p>
+                            </div>
+                            <div class="commentCount">
+                                <p>200</p>
+                                <p>Comments</p>
+                            </div>
+                            
+                        </div>
+                        <hr>
+                        <div class="commentAndLikes">
+                            <div class="like">
+                                <a href="">
+                                    <img src="/Images/mainLikeicon.png" alt="mainLike">
+                                    <h6>like</h6>
+                                </a>
+                                
+                            </div>
+                            <div class="comment">
+                                <a href="">
+                                    <img src="/Images/commentIcon.png" alt="COMMENT ICON">
+                                    <h6>Comment</h6>
+                                </a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <%})%>
+                </div>
+            </div>
+            <div class="pageDisplay">
+                <a href="/api/users/members" class="embers child">
+                    <p>Members</p>
+                </a>
+                <a href="/api/users/piusSociety" class="piousSociety child">
+                    <p>Pious Societies</p>
+                </a>
+                <a href="" class="zones child">
+                    <p>Zones</p>
+                </a>
+                <a href="" class="organization child">
+                    <p>organization</p>
+                </a>
+                <a href="" class="parishCouncil child">
+                    <p>Parish Council</p>
+                </a>
+                <a href="" class="events child">
+                    <p>Events</p>
+                </a>
+                
+            </div>
+        </main>
+
+        <script
+            
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"
+
+            window.location.reload()
+              
+        ></script>
+    </body>
+</html>

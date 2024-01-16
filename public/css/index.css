@@ -1,0 +1,364 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    /* height: 300px; */
+    background-color: rgb(216, 240, 216);
+    padding: 10px 0;
+}
+
+.submitpost{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.submitpost button{
+    display: flex;
+    width: 80%;
+    text-indent: 150px;
+    border-radius: 7px;
+    border: none;
+    background-color: green;
+
+}
+
+nav a{
+    color: black;
+    /* background-color: rgb(158, 200, 158); */
+    text-decoration: none;
+    font-size: medium;
+    border-radius:  5px;
+    padding: 5px;
+}
+
+nav a:hover {
+    background-color: green;
+}
+
+.logo img{
+    height: 60px;
+    width: 60px;
+    border-radius: 40%; 
+}
+.logo h1{
+    font-size: medium;
+}
+
+.logo{
+    display: flex;
+    flex: 1;
+    /* flex-direction: column; */
+    /* background-color: greenyellow                       ; */
+    align-items: center;
+    /* width: 200px; */
+    font-size: small;
+    justify-content: center;
+
+}  
+
+.user{
+    display: flex;
+    flex-direction: column;
+    flex: 1.5;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.user img{
+    height: 50px;
+    border-radius: 50%;
+    /* flex: 1; */
+}
+
+nav{
+    padding: 10px 0;
+    /* background-color: rgb(201, 216, 178) ;                       */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex: 5;
+    /* margin: 0 50px; */
+   /* gap: 10px; */
+}
+
+.search{
+    flex: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: greenyellow ; */
+}
+
+.members{
+    margin: 30px 150px;
+    display: grid;
+    height: 100vh;
+    /* width: 800px;  */
+    background-color: orange;
+    gap: 20px;
+    grid-template-columns: repeat(5,1fr);
+}
+
+.card{
+    background-color: rosybrown;
+    border: 3px solid brown;
+    display: flex;
+    flex-direction: column;
+}
+
+.img img{
+    width: 100%;
+    height: 30%;
+}
+
+.details{
+    display: flex;    
+    flex-direction: column;
+    background-color: green;
+}
+
+main{
+    padding: 20px 50px;
+    display: flex;
+    width: 100%;
+    min-height: 10vh;
+}
+
+.createposts{
+    height: 1000px;
+    /* width: 700px; */
+    overflow: auto;
+    /* overflow-clip-margin: 20px; */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    border-radius: 15px;
+    flex: 2;
+    /* background-color: rgb(217, 227, 227); */
+}
+
+.createposts::-webkit-scrollbar {
+    display: none;
+  }
+
+.pageDisplay{
+    /* background-color: aqua; */
+    display: grid;
+    height: 500px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    flex: 4;
+    gap: 10px;
+    /* background-color: blue; */
+    margin: 0 20px;
+}
+
+.child{
+    opacity: 0.9;
+    border-radius: 10px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-decoration: none;
+}
+
+.child p{
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    font-size: x-large;
+    padding: 5px 20px;
+    opacity: 0.8;
+}
+
+.embers{
+    
+    background-image: url('/Images/th.jfif');
+    background-size: cover;
+    
+}
+
+.piousSociety{
+    background-image: url('/Images/societies.jfif');
+    background-size: cover;
+}
+
+.zones{
+    background-image: url('../Images/zone.jfif');
+    background-size: cover;
+}
+
+.organization{
+    background-image: url('../Images/organization.jfif');
+}
+
+.parishCouncil{
+    background-image: url('../Images/parishCouncil.jfif');
+}
+
+.events{
+    background-image: url('../Images/events.jfif');
+}
+
+.pageDisplay img{
+    border-radius: 5px;
+    width: 100%;
+    height: 250px;
+
+}
+.createposts form{
+    border: 0.5px solid greenyellow ;
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+    height: fit-content;
+    background-color: aliceblue;
+    gap: 20px;
+}
+
+.postimage{
+    /* height: 200px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin: auto; */
+    /* justify-content: center; */
+}
+
+.writePost{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.writePost textarea{
+    border-radius: 5px;
+    text-decoration: none;
+    width: 250px;
+}
+
+hr{
+    margin: 0px;
+    width: 90%;
+    align-self: center;
+}
+
+.writePost img{
+    border: 2px solid grey;
+    background-color: aliceblue;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.posts{
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    margin: 5px;
+    border-radius: 10px;
+    border: 0.5px solid greenyellow;
+}
+
+.postWrap{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.postuser{
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.postuser img{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+
+.commentText{
+    padding: 10px;
+}
+
+.commentPic{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 5px;
+    background-color: aliceblue;
+}
+
+.commentPic img{
+    /* height: 200px; */
+    width: 150px;
+}
+
+.count{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.likeCount{
+    width: 200px;
+    gap: 5px;
+    display: flex;
+    justify-content: start;
+}
+
+.likeCount img{
+    height: 20px;
+}
+
+.commentCount{
+    width: 200px;
+    display: flex;
+    gap: 5px;
+    justify-content: flex-end;
+}
+
+.commentAndLikes{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.commentAndLikes img{
+    height: 30px;
+}
+
+.like a, .comment a{
+    width: 150px;
+    padding: 5px;
+    border-radius: 5px;
+    /* background-color: greenyellow; */
+    display: flex;
+    gap:10px;
+    text-decoration: none;
+    color: black;
+}
+
+.like a:hover, .comment a:hover{
+    background-color: rgb(217, 227, 227);
+}
+
+.pageDisplay
+
+/* .comment a{
+    width: 150px;
+    display: flex;
+    gap:10px;
+    text-decoration: none;
+} */
