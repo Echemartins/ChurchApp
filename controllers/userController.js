@@ -8,7 +8,7 @@ const session = require('express-session')
 
 async function registerUser(req,res){
     try {
-        console.log(req.myFile)
+        // console.log(req.myFile)
         const { username, email, password,role,zone,organization,piusSociety} = req.body;
         if (!username ||!email ||!password ) {
            return res.json("some fields `are compulsory");
